@@ -452,7 +452,7 @@ static Key keys[] = {
      {.v = (const char *[]){"xbacklight", "-dec", "15", NULL}}},
     {MODKEY, XK_S, spawn, SHCMD("transset -a --dec .1")},
     {MODKEY, XK_D, spawn, SHCMD("transset -a --inc .1")},
-    {MODKEY, XK_E, spawn, SHCMD("transset -a .9")},
+    {MODKEY, XK_E, spawn, SHCMD("transset -a .85")},
 
     /* { MODKEY|Mod4Mask,              XK_h,      incrgaps,       {.i = +1 } },
      */
