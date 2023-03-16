@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Constants */
-#define TERMINAL "st"
-#define TERMCLASS "St"
+#define TERMINAL "kitty"
+#define TERMCLASS "kitty"
 #define BROWSER "google-chrome-stable"
 
 /* appearance */
@@ -37,10 +37,15 @@ static char selbgcolor[] = "#005577";
 //     [SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},
 //     [SchemeSel] = {selfgcolor, selbgcolor, selbordercolor},
 // };
-
 static const char *volume[3][4] = {{"vup", NULL, NULL, NULL},
                                    {"vdw", NULL, NULL, NULL},
                                    {"vmt", NULL, NULL, NULL}};
+
+// static const char *volume[3][4] = {
+//	{"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%"},
+//	{"pactl", "set-sink-volume", "@DEFAULT_SINK@", "-10%"},
+//	{"pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle"}
+// };
 
 typedef struct {
   const char *name;
@@ -121,7 +126,7 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd)                                                             \
   {                                                                            \
-    .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL }                       \
+    .v = (const char *[]) { "/usr/bin/kitty", "-c", cmd, NULL }                \
   }
 
 /* commands */
