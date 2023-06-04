@@ -5,6 +5,8 @@ Needed sw
 
 * picom
 
+* transset
+
 * pywal
 
 * xsetroot
@@ -14,6 +16,7 @@ Needed sw
 * google-chrome-stable
 
 * nmtui
+
 
 Wallpaper image must be in /home/${USER}/.config/wall.png
 -----------------------------------------------------------------------------------
