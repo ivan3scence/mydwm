@@ -40,6 +40,8 @@ static char selbgcolor[] = "#005577";
 static const char *volume[3][4] = {{"vup", NULL, NULL, NULL},
                                    {"vdw", NULL, NULL, NULL},
                                    {"vmt", NULL, NULL, NULL}};
+static const char *brightness[2][4] = {{"brightnessctl", "set", "10%+", NULL},
+                                        {"brightnessctl", "set", "10%-", NULL}};
 
 // static const char *volume[3][4] = {
 //	{"pactl", "set-sink-volume", "@DEFAULT_SINK@", "+10%"},
@@ -62,7 +64,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = {">_", "w", "3", "4", "5", "6", "7", "8", "9"};
+static const char *tags[] = {"󰣇", "󰊯", "", "4", "5", "6", "7", "8", "9"};
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -173,8 +175,8 @@ static Key keys[] = {
         TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
             TAGKEYS(XK_9, 8){MODKEY, XK_0, view, {.ui = ~0}},
     {MODKEY | ShiftMask, XK_0, tag, {.ui = ~0}},
-    //{0, XF86XK_MonBrightnessUp, spawn, {.v = brightness[0]}},
-    //{0, XF86XK_MonBrightnessDown, spawn, {.v = brightness[1]}},
+    {0, XF86XK_MonBrightnessUp, spawn, {.v = brightness[0]}},
+    {0, XF86XK_MonBrightnessDown, spawn, {.v = brightness[1]}},
     {0, XF86XK_AudioRaiseVolume, spawn, {.v = volume[0]}},
     {0, XF86XK_AudioLowerVolume, spawn, {.v = volume[1]}},
     {0, XF86XK_AudioMute, spawn, {.v = volume[2]}},
@@ -447,14 +449,14 @@ static Key keys[] = {
      XF86XK_TouchpadOn,
      spawn,
      {.v = (const char *[]){"synclient", "TouchpadOff=0", NULL}}},
-    {0,
-     XF86XK_MonBrightnessUp,
-     spawn,
-     {.v = (const char *[]){"xbacklight", "-inc", "15", NULL}}},
-    {0,
-     XF86XK_MonBrightnessDown,
-     spawn,
-     {.v = (const char *[]){"xbacklight", "-dec", "15", NULL}}},
+    //{0,
+    // XF86XK_MonBrightnessUp,
+    // spawn,
+    // {.v = (const char *[]){"xbacklight", "-inc", "15", NULL}}},
+    //{0,
+    // XF86XK_MonBrightnessDown,
+    // spawn,
+    // {.v = (const char *[]){"xbacklight", "-dec", "15", NULL}}},
     {MODKEY, XK_S, spawn, SHCMD("transset -a --dec .1")},
     {MODKEY, XK_D, spawn, SHCMD("transset -a --inc .1")},
     {MODKEY, XK_E, spawn, SHCMD("transset -a .85")},
