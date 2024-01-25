@@ -22,9 +22,13 @@ static int showbar = 1; /* 0 means no bar */
 static int topbar = 1;  /* 0 means bottom bar */
 static const double defaultopacity = 1;
 
+//static char *fonts[] = {
+//    "monospace:size=10",
+//    "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true"};
+
 static char *fonts[] = {
-    "monospace:size=10",
-    "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true"};
+    "FontAwesome:size=10",
+    "consolas:size=10"};
 static char normbgcolor[] = "#222222";
 static char normbordercolor[] = "#444444";
 static char normfgcolor[] = "#bbbbbb";
@@ -64,7 +68,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = {"󰣇", "󰊯", "", "4", "5", "6", "7", "8", "9"};
+static const char *tags[] = {"󰣇", "w", ">_", "4", "5", "6", "7", "8", "9"};
 
 static const Rule rules[] = {
     /* xprop(1):
