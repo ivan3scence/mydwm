@@ -35,7 +35,7 @@ static char normfgcolor[] = "#bbbbbb";
 static char selfgcolor[] = "#eeeeee";
 static char selbordercolor[] = "#770000";
 static char selbgcolor[] = "#005577";
-#include "/home/ivan/.cache/wal/colors-wal-dwm.h"
+#include "/home/vano/.cache/wal/colors-wal-dwm.h"
 // static char *colors[][3] = {
 //     /*               fg           bg           border   */
 //     [SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},
@@ -68,7 +68,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = {"󰣇", "w", ">_", "4", "5", "6", "7", "8", "9"};
+static const char *tags[] = {"$>", "w", "3", "4", "5", "6", "7", "8", "9"};
 
 static const Rule rules[] = {
     /* xprop(1):
