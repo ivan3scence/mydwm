@@ -3,20 +3,17 @@ Needed sw
 
 * xwallpaper
 
-* picom
+* picom kitty libx11-dev libxft-dev libxinerama-dev libxcb1-dev libx11-xcb-dev libx11-dev libxinerama-dev libxft-dev libx11-xcb-dev libxcb-res0-dev
 
 * transset
 
-* pywal
+* pywal imagemagick
 
 * xsetroot
-
-* kitty
 
 * google-chrome-stable
 
 * nmtui
-
 
 Wallpaper image must be in /home/${USER}/.config/wall.png
 -----------------------------------------------------------------------------------
